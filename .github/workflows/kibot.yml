@@ -76,40 +76,40 @@ jobs:
         name: Default_Output
         path: Generated
 
-  var_usb:
-    name: USB variant
-    runs-on: ubuntu-latest
-    container: ghcr.io/inti-cmnb/kicad8_auto_full:latest
-    needs: [ERC, DRC]
+  # var_usb:
+  #   name: USB variant
+  #   runs-on: ubuntu-latest
+  #   container: ghcr.io/inti-cmnb/kicad8_auto_full:latest
+  #   needs: [ERC, DRC]
 
-    steps:
-    - uses: actions/checkout@v4
+  #   steps:
+  #   - uses: actions/checkout@v4
 
-    - name: Generate USB variant
-      run: |
-        make var_usb
+  #   - name: Generate USB variant
+  #     run: |
+  #       make var_usb
 
-    - name: Retrieve results
-      uses: actions/upload-artifact@v4
-      with:
-        name: USB_Output
-        path: Generated
+  #   - name: Retrieve results
+  #     uses: actions/upload-artifact@v4
+  #     with:
+  #       name: USB_Output
+  #       path: Generated
 
-  var_xtal:
-    name: XTAL variant
-    runs-on: ubuntu-latest
-    container: ghcr.io/inti-cmnb/kicad8_auto_full:latest
-    needs: [ERC, DRC]
+  # var_xtal:
+  #   name: XTAL variant
+  #   runs-on: ubuntu-latest
+  #   container: ghcr.io/inti-cmnb/kicad8_auto_full:latest
+  #   needs: [ERC, DRC]
 
-    steps:
-    - uses: actions/checkout@v4
+  #   steps:
+  #   - uses: actions/checkout@v4
 
-    - name: Generate XTAL variant
-      run: |
-        make var_xtal
+  #   - name: Generate XTAL variant
+  #     run: |
+  #       make var_xtal
 
-    - name: Retrieve results
-      uses: actions/upload-artifact@v4
-      with:
-        name: XTAL_Output
-        path: Generated
+  #   - name: Retrieve results
+  #     uses: actions/upload-artifact@v4
+  #     with:
+  #       name: XTAL_Output
+  #       path: Generated

@@ -45,17 +45,17 @@ variants:
     comment: 'Minimal PCB no USB'
     type: kibom
 
-  - name: 'USB'
-    comment: 'Full board'
-    type: kibom
-    file_id: _USB
-    variant: USB
+  # - name: 'USB'
+  #   comment: 'Full board'
+  #   type: kibom
+  #   file_id: _USB
+  #   variant: USB
 
-  - name: 'XTAL'
-    comment: 'No USB, but crystal included'
-    type: kibom
-    file_id: _XTAL
-    variant: XTAL
+  # - name: 'XTAL'
+  #   comment: 'No USB, but crystal included'
+  #   type: kibom
+  #   file_id: _XTAL
+  #   variant: XTAL
 
 outputs:
   - name: 'bom_xlsx'
@@ -239,6 +239,21 @@ outputs:
         samples: 20
       point_of_view:
         rotate_x: 30
+        rotate_z: -20
+      outputs:
+        - type: blender
+        - type: render
+
+  - name: 3D_bottom_view_HQ
+    comment: "3D render from bottom (High Quality)"
+    type: blender_export
+    dir: 3D
+    options:
+      render_options:
+        transparent_background: true
+        samples: 20
+      point_of_view:
+        rotate_x: 210
         rotate_z: -20
       outputs:
         - type: blender
