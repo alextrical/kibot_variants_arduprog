@@ -254,7 +254,8 @@ outputs:
         samples: 20
       point_of_view:
         rotate_x: 210
-        rotate_z: -20
+        rotate_z: -200
       outputs:
         - type: blender
         - type: render
+        - output: "%f-%i%I%v_bottom.%x"
