@@ -5,3 +5,4 @@ t1.xml
 *-bak
 .cache
 .DS_Store
+*/*.zip
