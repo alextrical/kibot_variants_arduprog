@@ -4,3 +4,4 @@ t1-backups
 t1.xml
 *-bak
 .cache
+.DS_Store
