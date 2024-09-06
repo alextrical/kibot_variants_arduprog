@@ -255,7 +255,7 @@ outputs:
       point_of_view:
         rotate_x: 210
         rotate_z: -20
-    output_id: '-BoTTom'
+      output_id: '-BoTTom'
       outputs:
         - type: blender
         - type: render
